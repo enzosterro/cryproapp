@@ -68,7 +68,7 @@ class StatusMenuController: NSObject {
 
 	private func scheduleUpdates() {
 		self.update()
-		timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+		timer = Timer.scheduledTimer(timeInterval: 180, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 	}
 	
 	// MARK: - State Handlers

@@ -23,7 +23,7 @@
         </customObject>
         <menu id="Kt7-j4-uOs">
             <items>
-                <menuItem title="Last Update:" enabled="NO" id="gz7-4F-Uyq">
+                <menuItem title="Last Updated: Long Time Ago" enabled="NO" id="gz7-4F-Uyq">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Yhe-dE-HzB"/>
