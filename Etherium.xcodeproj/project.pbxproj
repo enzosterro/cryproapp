@@ -16,6 +16,7 @@
 		C661D2CC1F82ADDE00359B56 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661D2CB1F82ADDE00359B56 /* Coin.swift */; };
 		C6D88C7D1F838B4100120A58 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6D88C7B1F838B4100120A58 /* LICENSE */; };
 		C6D88C7E1F838B4100120A58 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6D88C7C1F838B4100120A58 /* README.md */; };
+		C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */; };
 		F738270F1F83B9630069A8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C625BC3C1F836D2500DA41EF /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		C661D2CB1F82ADDE00359B56 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		C6D88C7B1F838B4100120A58 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C6D88C7C1F838B4100120A58 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormattedDate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				C661D2C91F82A57D00359B56 /* String+Format.swift */,
+				C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				C661D2C81F82841200359B56 /* CryptoAPI.swift in Sources */,
 				C661D2CA1F82A57D00359B56 /* String+Format.swift in Sources */,
 				C661D2C61F827FBA00359B56 /* StatusMenuController.swift in Sources */,
+				C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */,
 				C661D2CC1F82ADDE00359B56 /* Coin.swift in Sources */,
 				C661D2B81F827EC300359B56 /* AppDelegate.swift in Sources */,
 			);

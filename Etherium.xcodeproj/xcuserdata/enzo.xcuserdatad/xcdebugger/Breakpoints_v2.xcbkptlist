@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "Etherium/Views/Main/StatusMenuController.swift"
-            timestampString = "528712982.833432"
+            timestampString = "528731535.582499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "update()"
             landmarkType = "7">
             <Actions>

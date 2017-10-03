@@ -16,7 +16,7 @@ struct Coin {
 	let percent_change_1h: String
 	let percent_change_24h: String
 	let percent_change_7d: String
-	let last_updated: String
+	let last_updated: Double
 }
 
 extension Coin {
@@ -39,6 +39,6 @@ extension Coin {
 		self.percent_change_1h = percent_change_1h
 		self.percent_change_24h = percent_change_24h
 		self.percent_change_7d = percent_change_7d
-		self.last_updated = last_updated
+		self.last_updated = Double(last_updated) ?? 0
 	}
 }

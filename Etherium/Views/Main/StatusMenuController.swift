@@ -14,6 +14,7 @@ class StatusMenuController: NSObject {
 	
 	@IBOutlet weak var statusMenu: NSMenu!
 	@IBOutlet weak var statusChangeMenuButton: NSMenuItem!
+	@IBOutlet weak var lastUpdateMenuButton: NSMenuItem!
 	
 	// MARK: - State Enumerations
 	
@@ -54,6 +55,7 @@ class StatusMenuController: NSObject {
 				for coin in coins where coin.id == self.currentCoin.rawValue {
 					DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 						self.switchRateLabelState(to: .showing(coin.price_usd))
+						self.lastUpdateMenuButton.title = coin.last_updated.formattedDate
 					}
 				}
 			case .error(let error):
