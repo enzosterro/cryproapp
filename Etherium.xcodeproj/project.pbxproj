@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C625BC401F836DA900DA41EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C661D2BB1F827EC300359B56 /* MainMenu.xib */; };
+		C625BC421F837DC800DA41EF /* CoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625BC411F837DC800DA41EF /* CoinModels.swift */; };
+		C661D2B81F827EC300359B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661D2B71F827EC300359B56 /* AppDelegate.swift */; };
+		C661D2C61F827FBA00359B56 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661D2C51F827FBA00359B56 /* StatusMenuController.swift */; };
+		C661D2C81F82841200359B56 /* CryptoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661D2C71F82841200359B56 /* CryptoAPI.swift */; };
+		C661D2CA1F82A57D00359B56 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661D2C91F82A57D00359B56 /* String+Format.swift */; };
+		C661D2CC1F82ADDE00359B56 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661D2CB1F82ADDE00359B56 /* Coin.swift */; };
+		C6D88C7D1F838B4100120A58 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6D88C7B1F838B4100120A58 /* LICENSE */; };
+		C6D88C7E1F838B4100120A58 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6D88C7C1F838B4100120A58 /* README.md */; };
+		F738270F1F83B9630069A8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C625BC3C1F836D2500DA41EF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C625BC3C1F836D2500DA41EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C625BC3E1F836D3200DA41EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C625BC411F837DC800DA41EF /* CoinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModels.swift; sourceTree = "<group>"; };
+		C661D2B41F827EC300359B56 /* Etherium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etherium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C661D2B71F827EC300359B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C661D2BC1F827EC300359B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C661D2BF1F827EC300359B56 /* Etherium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Etherium.entitlements; sourceTree = "<group>"; };
+		C661D2C51F827FBA00359B56 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		C661D2C71F82841200359B56 /* CryptoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAPI.swift; sourceTree = "<group>"; };
+		C661D2C91F82A57D00359B56 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
+		C661D2CB1F82ADDE00359B56 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		C6D88C7B1F838B4100120A58 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6D88C7C1F838B4100120A58 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C661D2B11F827EC300359B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C661D2AB1F827EC300359B56 = {
+			isa = PBXGroup;
+			children = (
+				C661D2B61F827EC300359B56 /* Etherium */,
+				C6D88C7B1F838B4100120A58 /* LICENSE */,
+				C6D88C7C1F838B4100120A58 /* README.md */,
+				C661D2B51F827EC300359B56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C661D2B51F827EC300359B56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2B41F827EC300359B56 /* Etherium.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C661D2B61F827EC300359B56 /* Etherium */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2CD1F82AE5D00359B56 /* Model */,
+				C661D2CE1F82AEDA00359B56 /* Views */,
+				C661D2D11F82B0B100359B56 /* Helpers */,
+				C661D2D61F82B29B00359B56 /* Supporting Files */,
+			);
+			path = Etherium;
+			sourceTree = "<group>";
+		};
+		C661D2CD1F82AE5D00359B56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2CB1F82ADDE00359B56 /* Coin.swift */,
+				C625BC411F837DC800DA41EF /* CoinModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C661D2CE1F82AEDA00359B56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2CF1F82AEE500359B56 /* UI */,
+				C661D2D01F82B09F00359B56 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C661D2CF1F82AEE500359B56 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2BB1F827EC300359B56 /* MainMenu.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C661D2D01F82B09F00359B56 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2B71F827EC300359B56 /* AppDelegate.swift */,
+				C661D2C51F827FBA00359B56 /* StatusMenuController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C661D2D11F82B0B100359B56 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2D31F82B0C700359B56 /* Extensions */,
+				C661D2D21F82B0B800359B56 /* Managers */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C661D2D21F82B0B800359B56 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2C71F82841200359B56 /* CryptoAPI.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C661D2D31F82B0C700359B56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2C91F82A57D00359B56 /* String+Format.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C661D2D61F82B29B00359B56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C625BC3E1F836D3200DA41EF /* Info.plist */,
+				C625BC3C1F836D2500DA41EF /* Assets.xcassets */,
+				C661D2BF1F827EC300359B56 /* Etherium.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C661D2B31F827EC300359B56 /* Etherium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C661D2C21F827EC300359B56 /* Build configuration list for PBXNativeTarget "Etherium" */;
+			buildPhases = (
+				C661D2B01F827EC300359B56 /* Sources */,
+				C661D2B11F827EC300359B56 /* Frameworks */,
+				C661D2B21F827EC300359B56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Etherium;
+			productName = Etherium;
+			productReference = C661D2B41F827EC300359B56 /* Etherium.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C661D2AC1F827EC300359B56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Aleksandr Kundelev";
+				TargetAttributes = {
+					C661D2B31F827EC300359B56 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "Etherium" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C661D2AB1F827EC300359B56;
+			productRefGroup = C661D2B51F827EC300359B56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C661D2B31F827EC300359B56 /* Etherium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C661D2B21F827EC300359B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F738270F1F83B9630069A8EA /* Assets.xcassets in Resources */,
+				C6D88C7E1F838B4100120A58 /* README.md in Resources */,
+				C6D88C7D1F838B4100120A58 /* LICENSE in Resources */,
+				C625BC401F836DA900DA41EF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C661D2B01F827EC300359B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C625BC421F837DC800DA41EF /* CoinModels.swift in Sources */,
+				C661D2C81F82841200359B56 /* CryptoAPI.swift in Sources */,
+				C661D2CA1F82A57D00359B56 /* String+Format.swift in Sources */,
+				C661D2C61F827FBA00359B56 /* StatusMenuController.swift in Sources */,
+				C661D2CC1F82ADDE00359B56 /* Coin.swift in Sources */,
+				C661D2B81F827EC300359B56 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C661D2BB1F827EC300359B56 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C661D2BC1F827EC300359B56 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C661D2C01F827EC300359B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C661D2C11F827EC300359B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		C661D2C31F827EC300359B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Etherium/Etherium.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3H7RS6HW3;
+				INFOPLIST_FILE = Etherium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.Etherium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C661D2C41F827EC300359B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Etherium/Etherium.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3H7RS6HW3;
+				INFOPLIST_FILE = Etherium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.Etherium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "Etherium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C661D2C01F827EC300359B56 /* Debug */,
+				C661D2C11F827EC300359B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C661D2C21F827EC300359B56 /* Build configuration list for PBXNativeTarget "Etherium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C661D2C31F827EC300359B56 /* Debug */,
+				C661D2C41F827EC300359B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C661D2AC1F827EC300359B56 /* Project object */;
+}

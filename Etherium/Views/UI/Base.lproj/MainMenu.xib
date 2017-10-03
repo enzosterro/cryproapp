@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Etherium" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="qOh-PI-6Ie" customClass="StatusMenuController" customModule="Etherium" customModuleProvider="target">
+            <connections>
+                <outlet property="statusChangeMenuButton" destination="5nA-N2-YI5" id="SQC-PW-8d7"/>
+                <outlet property="statusMenu" destination="Kt7-j4-uOs" id="937-qQ-GId"/>
+            </connections>
+        </customObject>
+        <menu id="Kt7-j4-uOs">
+            <items>
+                <menuItem title="Refresh" id="Km7-yn-GyV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusChangeClicked:" target="qOh-PI-6Ie" id="ZIc-Ya-6Qq"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Pause" id="5nA-N2-YI5">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusChangeClicked:" target="qOh-PI-6Ie" id="ege-rX-e8F"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="6O8-db-qN5"/>
+                <menuItem title="Quit" id="jYr-ou-LWf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusChangeClicked:" target="qOh-PI-6Ie" id="g2H-Wb-q2L"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="64" y="123.5"/>
+        </menu>
+    </objects>
+</document>
