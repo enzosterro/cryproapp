@@ -6,7 +6,9 @@
 //  Copyright © 2017 Enzo Sterro. All rights reserved.
 //
 
+import Cocoa
 import Foundation
+
 
 struct Coin {
 	let id: String
@@ -17,6 +19,7 @@ struct Coin {
 	let percent_change_24h: String
 	let percent_change_7d: String
 	let last_updated: Double
+    let icon: NSImage
 }
 
 extension Coin {
@@ -29,7 +32,8 @@ extension Coin {
 			let percent_change_1h = json["percent_change_1h"] as? String,
 			let percent_change_24h = json["percent_change_24h"] as? String,
 			let percent_change_7d = json["percent_change_7d"] as? String,
-			let last_updated = json["last_updated"] as? String
+			let last_updated = json["last_updated"] as? String,
+            let icon = NSImage(named: NSImage.Name(id))
         else { return nil }
 		
 		self.id = id
@@ -40,5 +44,6 @@ extension Coin {
 		self.percent_change_24h = percent_change_24h
 		self.percent_change_7d = percent_change_7d
 		self.last_updated = Double(last_updated) ?? 0
+        self.icon = icon
 	}
 }

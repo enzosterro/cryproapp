@@ -22,8 +22,8 @@ class StatusMenuController: NSObject {
 		case updating, stopped
 	}
 	
-	enum RateLabelState<String> {
-		case showing(String)
+	enum RateLabelState<Coin> {
+		case showing(Coin)
 		case updating
 		case error
 	}
@@ -34,7 +34,7 @@ class StatusMenuController: NSObject {
 	let cryptoAPI = CryptoAPI()
 	var timer: Timer! = nil
 	var timerState: MainAppState = .updating
-	var rateState: RateLabelState<String> = .updating
+	var rateState: RateLabelState<Coin> = .updating
 	var currentCoin = CoinModel.name.Ethereum
 	
 	// MARK: - View Lifecycle
@@ -47,16 +47,23 @@ class StatusMenuController: NSObject {
 	}
 	
 	// MARK: - Update Methods
-	
+    
+    private func scheduleUpdates() {
+        self.update()
+        timer = Timer.scheduledTimer(timeInterval: 180, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    }
+    
 	@objc private func update() {
         cryptoAPI.fetchRatesFor(currency: currentCoin) { result in
 			switch result {
-			case .success(let coins):
-				for coin in coins where coin.id == self.currentCoin.rawValue {
-					DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-						self.switchRateLabelState(to: .showing(coin.price_usd))
-						self.lastUpdateMenuButton.title = coin.last_updated.formattedDate
-					}
+            case .success(let coins):
+                guard let coin = coins.first else {
+                    NSLog("Couldn't retrieve information from server.")
+                    return
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.switchRateLabelState(to: .showing(coin))
+                    self.lastUpdateMenuButton.title = coin.last_updated.formattedDate
 				}
 			case .error(let error):
 				NSLog(error.localizedDescription)
@@ -66,11 +73,6 @@ class StatusMenuController: NSObject {
 		}
 	}
 
-	private func scheduleUpdates() {
-		self.update()
-		timer = Timer.scheduledTimer(timeInterval: 180, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-	}
-	
 	// MARK: - State Handlers
 	
 	private func switchTimerState(to state: MainAppState) {
@@ -87,11 +89,12 @@ class StatusMenuController: NSObject {
 		}
 	}
 	
-	private func switchRateLabelState(to state: RateLabelState<String>) {
+	private func switchRateLabelState(to state: RateLabelState<Coin>) {
 		self.rateState = state
 		switch self.rateState {
-		case .showing(let price):
-			self.statusItem.title = price.formattedString
+		case .showing(let coin):
+			self.statusItem.title = coin.price_usd.formattedString
+            self.statusItem.image = coin.icon   // rewrite to not set icon every time
 		case .updating:
 			self.statusItem.title = NSLocalizedString("Updating…", comment: "Title next to the rate, that indicates an update process.")
 		case .error:
