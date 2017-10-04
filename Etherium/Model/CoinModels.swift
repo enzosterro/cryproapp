@@ -8,10 +8,6 @@
 
 enum CoinModel {
 	
-	enum id: String {
-		case ethereum, bitcoin
-	}
-	
 	enum name: String {
 		case Ethereum, Bitcoin
 	}

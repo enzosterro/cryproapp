@@ -16,11 +16,11 @@ enum Result<T> {
 
 class CryptoAPI {
 
-	private let BASE_URL = "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=10"
+	private let BASE_URL = "https://api.coinmarketcap.com/v1/ticker/"
 	
-	func fetchRates(success: @escaping (Result<[Coin]>) -> Void) {
+    func fetchRatesFor(currency: CoinModel.name, success: @escaping (Result<[Coin]>) -> Void) {
 		let session = URLSession.shared
-		let url = URL(string: BASE_URL)
+		let url = URL(string: BASE_URL + currency.rawValue.lowercased())
 		
 		let task = session.dataTask(with: url!) { data, response, error in
 			if let explicitError = error {

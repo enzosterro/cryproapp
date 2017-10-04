@@ -35,7 +35,7 @@ class StatusMenuController: NSObject {
 	var timer: Timer! = nil
 	var timerState: MainAppState = .updating
 	var rateState: RateLabelState<String> = .updating
-	var currentCoin = CoinModel.id.ethereum
+	var currentCoin = CoinModel.name.Ethereum
 	
 	// MARK: - View Lifecycle
 	
@@ -49,7 +49,7 @@ class StatusMenuController: NSObject {
 	// MARK: - Update Methods
 	
 	@objc private func update() {
-		cryptoAPI.fetchRates() { result in
+        cryptoAPI.fetchRatesFor(currency: currentCoin) { result in
 			switch result {
 			case .success(let coins):
 				for coin in coins where coin.id == self.currentCoin.rawValue {

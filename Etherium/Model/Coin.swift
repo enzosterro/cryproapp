@@ -30,7 +30,7 @@ extension Coin {
 			let percent_change_24h = json["percent_change_24h"] as? String,
 			let percent_change_7d = json["percent_change_7d"] as? String,
 			let last_updated = json["last_updated"] as? String
-			else { return nil }
+        else { return nil }
 		
 		self.id = id
 		self.name = name
