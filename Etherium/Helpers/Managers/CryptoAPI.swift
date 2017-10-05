@@ -14,11 +14,6 @@ enum Result<T> {
 	case customError(String)
 }
 
-struct TickerAPI {
-    static let baseURL = "https://api.coinmarketcap.com/v1/ticker/"
-    static let top10Currencies = "?limit=20"
-}
-
 class CryptoAPI {
 	
     func fetchRatesFor(topCurrencies: Bool = false, currency: CoinModel.name = .bitcoin, success: @escaping (Result<[Coin]>) -> Void) {
@@ -26,9 +21,9 @@ class CryptoAPI {
         var url: URL!
         
         if topCurrencies {
-            url = URL(string: TickerAPI.baseURL + TickerAPI.top10Currencies)
+            url = URL(string: TickerURLManager.baseURL + TickerURLManager.topCurrencies)
         } else {
-            url = URL(string: TickerAPI.baseURL + currency.rawValue)
+            url = URL(string: TickerURLManager.baseURL + currency.rawValue)
         }
         
 		let task = session.dataTask(with: url!) { data, response, error in

@@ -19,6 +19,7 @@
 		C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */; };
 		F738270F1F83B9630069A8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C625BC3C1F836D2500DA41EF /* Assets.xcassets */; };
 		F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */; };
+		F7824CAE1F867284000C0594 /* TickerURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAD1F867284000C0594 /* TickerURLManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C6D88C7C1F838B4100120A58 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormattedDate.swift"; sourceTree = "<group>"; };
 		F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
+		F7824CAD1F867284000C0594 /* TickerURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerURLManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C661D2C71F82841200359B56 /* CryptoAPI.swift */,
+				F7824CAD1F867284000C0594 /* TickerURLManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				C661D2C81F82841200359B56 /* CryptoAPI.swift in Sources */,
 				C661D2CA1F82A57D00359B56 /* String+Format.swift in Sources */,
 				C661D2C61F827FBA00359B56 /* StatusMenuController.swift in Sources */,
+				F7824CAE1F867284000C0594 /* TickerURLManager.swift in Sources */,
 				F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */,
 				C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */,
 				C661D2CC1F82ADDE00359B56 /* Coin.swift in Sources */,
