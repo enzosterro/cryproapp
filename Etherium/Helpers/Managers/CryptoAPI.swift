@@ -14,14 +14,23 @@ enum Result<T> {
 	case customError(String)
 }
 
-class CryptoAPI {
+struct TickerAPI {
+    static let baseURL = "https://api.coinmarketcap.com/v1/ticker/"
+    static let top10Currencies = "?limit=20"
+}
 
-	private let BASE_URL = "https://api.coinmarketcap.com/v1/ticker/"
+class CryptoAPI {
 	
-    func fetchRatesFor(currency: CoinModel.name, success: @escaping (Result<[Coin]>) -> Void) {
+    func fetchRatesFor(topCurrencies: Bool = false, currency: CoinModel.name = .bitcoin, success: @escaping (Result<[Coin]>) -> Void) {
 		let session = URLSession.shared
-		let url = URL(string: BASE_URL + currency.rawValue.lowercased())
-		
+        var url: URL!
+        
+        if topCurrencies {
+            url = URL(string: TickerAPI.baseURL + TickerAPI.top10Currencies)
+        } else {
+            url = URL(string: TickerAPI.baseURL + currency.rawValue)
+        }
+        
 		let task = session.dataTask(with: url!) { data, response, error in
 			if let explicitError = error {
 				success(.error(explicitError))

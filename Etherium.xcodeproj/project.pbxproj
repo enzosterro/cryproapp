@@ -18,6 +18,7 @@
 		C6D88C7E1F838B4100120A58 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6D88C7C1F838B4100120A58 /* README.md */; };
 		C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */; };
 		F738270F1F83B9630069A8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C625BC3C1F836D2500DA41EF /* Assets.xcassets */; };
+		F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C6D88C7B1F838B4100120A58 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C6D88C7C1F838B4100120A58 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormattedDate.swift"; sourceTree = "<group>"; };
+		F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				C661D2C91F82A57D00359B56 /* String+Format.swift */,
 				C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */,
+				F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				C661D2C81F82841200359B56 /* CryptoAPI.swift in Sources */,
 				C661D2CA1F82A57D00359B56 /* String+Format.swift in Sources */,
 				C661D2C61F827FBA00359B56 /* StatusMenuController.swift in Sources */,
+				F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */,
 				C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */,
 				C661D2CC1F82ADDE00359B56 /* Coin.swift in Sources */,
 				C661D2B81F827EC300359B56 /* AppDelegate.swift in Sources */,

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
     </dependencies>
     <objects>
@@ -16,6 +15,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="qOh-PI-6Ie" customClass="StatusMenuController" customModule="Etherium" customModuleProvider="target">
             <connections>
+                <outlet property="currenciesMenuAsset" destination="FpR-VE-7nO" id="hnd-vR-Nyl"/>
                 <outlet property="lastUpdateMenuButton" destination="gz7-4F-Uyq" id="Bys-7h-Hc2"/>
                 <outlet property="statusChangeMenuButton" destination="5nA-N2-YI5" id="SQC-PW-8d7"/>
                 <outlet property="statusMenu" destination="Kt7-j4-uOs" id="937-qQ-GId"/>
@@ -23,17 +23,22 @@
         </customObject>
         <menu id="Kt7-j4-uOs">
             <items>
-                <menuItem title="Last Updated: Long Time Ago" enabled="NO" id="gz7-4F-Uyq">
+                <menuItem title="Last Updated: Never" enabled="NO" id="gz7-4F-Uyq">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="jKG-h7-WnR"/>
+                <menuItem title="Currency" id="FpR-VE-7nO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Currency" id="jG9-Zp-iUU"/>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="Yhe-dE-HzB"/>
-                <menuItem title="Refresh" id="Km7-yn-GyV">
+                <menuItem title="Force Refresh" id="Km7-yn-GyV">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="refreshClicked:" target="qOh-PI-6Ie" id="axq-C5-DKy"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Pause" id="5nA-N2-YI5">
+                <menuItem title="Pause Updates" id="5nA-N2-YI5">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="statusChangeClicked:" target="qOh-PI-6Ie" id="ege-rX-e8F"/>
