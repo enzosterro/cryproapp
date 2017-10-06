@@ -16,6 +16,8 @@ class StatusMenuController: NSObject {
 	@IBOutlet weak var statusChangeMenuButton: NSMenuItem!
 	@IBOutlet weak var lastUpdateMenuButton: NSMenuItem!
     @IBOutlet weak var currenciesMenuAsset: NSMenuItem!
+    @IBOutlet weak var statisticMenuItem: NSMenuItem!
+    @IBOutlet weak var statisticMenuView: StatisticMenuView!
     
     // MARK: - State Enumerations
 	
@@ -61,8 +63,11 @@ class StatusMenuController: NSObject {
         // Starting from showing "Updating" status
 		self.switchRateLabelState(to: .updating(currentCoin))
         
+        // Init statistic menu item
+        statisticMenuItem.view = statisticMenuView
+     
         // Scheduling updates
-		self.scheduleUpdates()
+        self.scheduleUpdates()
 	}
 	
 	// MARK: - Update Methods
@@ -112,6 +117,8 @@ class StatusMenuController: NSObject {
 		case .showing(let coin):
 			self.statusItem.title = coin.price_usd.formattedString
             self.lastUpdateMenuButton.title = coin.last_updated.formattedDate
+            self.statisticMenuView.configureWith(coin: coin)
+            
 //            self.statusItem.image = coin.icon   // rewrite to not set icon every time
 		case .updating(let coin):
             self.statusItem.image = NSImage(named: NSImage.Name(coin.rawValue))
@@ -122,7 +129,6 @@ class StatusMenuController: NSObject {
 			self.statusItem.title = NSLocalizedString("Error", comment: "Title next to the rate, that indicates an error due connection problems.")
 		}
 	}
-    
     
     // MARK: - Currencies Menu Construction
     

@@ -20,6 +20,10 @@
 		F738270F1F83B9630069A8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C625BC3C1F836D2500DA41EF /* Assets.xcassets */; };
 		F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */; };
 		F7824CAE1F867284000C0594 /* TickerURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAD1F867284000C0594 /* TickerURLManager.swift */; };
+		F7C1E5741F876F1300FF0893 /* StatisticMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E5731F876F1300FF0893 /* StatisticMenuView.swift */; };
+		F7C1E5761F87730200FF0893 /* NSView+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E5751F87730200FF0893 /* NSView+BackgroundColor.swift */; };
+		F7C1E57A1F877A2D00FF0893 /* PercentChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E5791F877A2D00FF0893 /* PercentChangeView.swift */; };
+		F7C1E57C1F87921A00FF0893 /* NSColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E57B1F87921A00FF0893 /* NSColor+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormattedDate.swift"; sourceTree = "<group>"; };
 		F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
 		F7824CAD1F867284000C0594 /* TickerURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerURLManager.swift; sourceTree = "<group>"; };
+		F7C1E5731F876F1300FF0893 /* StatisticMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticMenuView.swift; sourceTree = "<group>"; };
+		F7C1E5751F87730200FF0893 /* NSView+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+BackgroundColor.swift"; sourceTree = "<group>"; };
+		F7C1E5791F877A2D00FF0893 /* PercentChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentChangeView.swift; sourceTree = "<group>"; };
+		F7C1E57B1F87921A00FF0893 /* NSColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,8 @@
 			children = (
 				C661D2B71F827EC300359B56 /* AppDelegate.swift */,
 				C661D2C51F827FBA00359B56 /* StatusMenuController.swift */,
+				F7C1E5731F876F1300FF0893 /* StatisticMenuView.swift */,
+				F7C1E5791F877A2D00FF0893 /* PercentChangeView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -140,6 +150,8 @@
 				C661D2C91F82A57D00359B56 /* String+Format.swift */,
 				C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */,
 				F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */,
+				F7C1E5751F87730200FF0893 /* NSView+BackgroundColor.swift */,
+				F7C1E57B1F87921A00FF0893 /* NSColor+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,7 +246,11 @@
 			files = (
 				C625BC421F837DC800DA41EF /* CoinModels.swift in Sources */,
 				C661D2C81F82841200359B56 /* CryptoAPI.swift in Sources */,
+				F7C1E5741F876F1300FF0893 /* StatisticMenuView.swift in Sources */,
 				C661D2CA1F82A57D00359B56 /* String+Format.swift in Sources */,
+				F7C1E57A1F877A2D00FF0893 /* PercentChangeView.swift in Sources */,
+				F7C1E5761F87730200FF0893 /* NSView+BackgroundColor.swift in Sources */,
+				F7C1E57C1F87921A00FF0893 /* NSColor+Custom.swift in Sources */,
 				C661D2C61F827FBA00359B56 /* StatusMenuController.swift in Sources */,
 				F7824CAE1F867284000C0594 /* TickerURLManager.swift in Sources */,
 				F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */,

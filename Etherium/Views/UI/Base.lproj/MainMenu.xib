@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -17,6 +19,8 @@
             <connections>
                 <outlet property="currenciesMenuAsset" destination="FpR-VE-7nO" id="hnd-vR-Nyl"/>
                 <outlet property="lastUpdateMenuButton" destination="gz7-4F-Uyq" id="Bys-7h-Hc2"/>
+                <outlet property="statisticMenuItem" destination="VTx-HB-3Jw" id="FUF-p6-XZE"/>
+                <outlet property="statisticMenuView" destination="U0Y-S8-FI5" id="9Uv-L4-4uV"/>
                 <outlet property="statusChangeMenuButton" destination="5nA-N2-YI5" id="SQC-PW-8d7"/>
                 <outlet property="statusMenu" destination="Kt7-j4-uOs" id="937-qQ-GId"/>
             </connections>
@@ -27,6 +31,9 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="jKG-h7-WnR"/>
+                <menuItem title="Statistic" id="VTx-HB-3Jw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="Currency" id="FpR-VE-7nO">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Currency" id="jG9-Zp-iUU"/>
@@ -54,5 +61,101 @@
             </items>
             <point key="canvasLocation" x="64" y="113.5"/>
         </menu>
+        <customView id="U0Y-S8-FI5" customClass="StatisticMenuView" customModule="Etherium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWQ-oQ-QEV">
+                    <rect key="frame" x="18" y="71" width="74" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Ethereum" id="yq0-p7-zMB">
+                        <font key="font" size="16" name=".AppleSystemUIFont"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCM-zt-h72" customClass="PercentChangeView" customModule="Etherium" customModuleProvider="target">
+                    <rect key="frame" x="20" y="20" width="70" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-IR-euK">
+                            <rect key="frame" x="3" y="5" width="64" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" id="5Vl-ik-tyb">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-Cd-71A" customClass="PercentChangeView" customModule="Etherium" customModuleProvider="target">
+                    <rect key="frame" x="110" y="20" width="70" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJm-5h-rq3">
+                            <rect key="frame" x="3" y="5" width="64" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" id="qPF-NO-gEt">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N82-Je-OWy" customClass="PercentChangeView" customModule="Etherium" customModuleProvider="target">
+                    <rect key="frame" x="200" y="20" width="70" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-SC-tit">
+                            <rect key="frame" x="3" y="5" width="64" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" id="e1H-hV-ebR">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-7G-vZK">
+                    <rect key="frame" x="18" y="46" width="74" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="1 hour" id="pbG-9M-s4R">
+                        <font key="font" metaFont="systemBold" size="11"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-ED-h7k">
+                    <rect key="frame" x="108" y="46" width="74" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="24 hours" id="bD9-Ma-m0p">
+                        <font key="font" metaFont="systemBold" size="11"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-E1-hcv">
+                    <rect key="frame" x="198" y="46" width="74" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="7 days" id="yws-xv-AQa">
+                        <font key="font" metaFont="systemBold" size="11"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <connections>
+                <outlet property="percentChange1hLabel" destination="hy8-IR-euK" id="hnV-Qh-FT9"/>
+                <outlet property="percentChange1hView" destination="gCM-zt-h72" id="2Td-Jr-Xkq"/>
+                <outlet property="percentChange24hLabel" destination="rJm-5h-rq3" id="Ey1-XQ-cMR"/>
+                <outlet property="percentChange24hView" destination="ffD-Cd-71A" id="vtl-EQ-Npc"/>
+                <outlet property="percentChange7dLabel" destination="zZg-SC-tit" id="5ZG-45-wMj"/>
+                <outlet property="percentChange7dView" destination="N82-Je-OWy" id="zX4-xB-xXM"/>
+            </connections>
+            <point key="canvasLocation" x="359" y="87"/>
+        </customView>
     </objects>
 </document>
