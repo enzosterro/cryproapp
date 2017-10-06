@@ -10,6 +10,8 @@ import Cocoa
 
 class StatisticMenuView: NSView {
 
+    @IBOutlet weak var currencyNameLabel: NSTextField!
+    
     @IBOutlet weak var percentChange1hView: PercentChangeView!
     @IBOutlet weak var percentChange24hView: PercentChangeView!
     @IBOutlet weak var percentChange7dView: PercentChangeView!
@@ -23,6 +25,9 @@ class StatisticMenuView: NSView {
     }
     
     func configureWith(coin: Coin) {
+        
+        currencyNameLabel.stringValue = coin.name
+        
         percentChange1hLabel.stringValue = coin.percentChange1h
         percentChange24hLabel.stringValue = coin.percentChange24h
         percentChange7dLabel.stringValue = coin.percentChange7d
