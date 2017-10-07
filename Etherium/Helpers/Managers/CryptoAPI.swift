@@ -16,7 +16,7 @@ enum Result<T> {
 
 class CryptoAPI {
 	
-    func fetchRatesFor(topCurrencies: Bool = false, currency: CoinModel.name = .bitcoin, success: @escaping (Result<[Coin]>) -> Void) {
+    func fetchRatesFor(topCurrencies: Bool = false, currency: CoinModel.name = .undefined, success: @escaping (Result<[Coin]>) -> Void) {
 		let session = URLSession.shared
         var url: URL!
         
