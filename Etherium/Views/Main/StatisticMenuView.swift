@@ -32,12 +32,8 @@ class StatisticMenuView: NSView {
         percentChange24hLabel.stringValue = coin.percentChange24h
         percentChange7dLabel.stringValue = coin.percentChange7d
         
-        percentChange1hView.backgroundColor = setBackgroundColorFor(trend: coin.percentChange1h)
-        percentChange24hView.backgroundColor = setBackgroundColorFor(trend: coin.percentChange24h)
-        percentChange7dView.backgroundColor = setBackgroundColorFor(trend: coin.percentChange7d)
-    }
-    
-    private func setBackgroundColorFor(trend: String) -> NSColor {
-        return !trend.contains("-") ? NSColor.trendGreen : NSColor.trendRed
+        percentChange1hView.setBackgroundColorFor(trend: coin.percentChange1h)
+        percentChange24hView.setBackgroundColorFor(trend: coin.percentChange24h)
+        percentChange7dView.setBackgroundColorFor(trend: coin.percentChange7d)
     }
 }

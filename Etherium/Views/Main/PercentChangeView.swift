@@ -16,4 +16,8 @@ class PercentChangeView: NSView {
         layer?.masksToBounds = true
         layer?.cornerRadius = 4
     }
+    
+    func setBackgroundColorFor(trend: String) {
+        self.backgroundColor = !trend.contains("-") ? .trendGreen : .trendRed
+    }
 }
