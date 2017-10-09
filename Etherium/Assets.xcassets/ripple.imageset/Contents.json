@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "ethereum.png",
+      "filename" : "ripple.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "ethereum@2x.png",
+      "filename" : "ripple@2x.png",
       "scale" : "2x"
     }
   ],

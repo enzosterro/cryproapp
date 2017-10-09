@@ -66,7 +66,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWQ-oQ-QEV">
-                    <rect key="frame" x="18" y="71" width="74" height="19"/>
+                    <rect key="frame" x="18" y="71" width="254" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Ethereum" id="yq0-p7-zMB">
                         <font key="font" metaFont="menuBar"/>

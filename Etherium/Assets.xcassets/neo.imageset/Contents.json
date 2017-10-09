@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "ethereum.png",
+      "filename" : "neo@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "ethereum@2x.png",
+      "filename" : "neo@2x.png",
       "scale" : "2x"
     }
   ],
