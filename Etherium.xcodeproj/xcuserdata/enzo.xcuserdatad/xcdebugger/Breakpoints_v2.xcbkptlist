@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "update()"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
