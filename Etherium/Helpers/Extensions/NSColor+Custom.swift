@@ -2,8 +2,8 @@
 //  NSColor+Custom.swift
 //  Etherium
 //
-//  Created by Aleksandr Kundelev on 06/10/2017.
-//  Copyright © 2017 Aleksandr Kundelev. All rights reserved.
+//  Created by Enzo Sterro on 06/10/2017.
+//  Copyright © 2017 Enzo Sterro. All rights reserved.
 //
 
 import Foundation

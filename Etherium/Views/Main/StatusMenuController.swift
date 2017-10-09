@@ -119,7 +119,7 @@ class StatusMenuController: NSObject {
             self.lastUpdateMenuButton.title = coin.last_updated.formattedDate
             self.statisticMenuView.configureWith(coin: coin)
 		case .updating(let coin):
-            self.statusItem.image = NSImage(named: NSImage.Name(coin.rawValue))
+            self.statusItem.image = NSImage(named: NSImage.Name(coin.rawValue)) ?? NSImage(named: NSImage.Name("default"))
 			self.statusItem.title = NSLocalizedString("Updating…", comment: "Title next to the rate, that indicates an update process.")
 		case .error:
 			self.statusItem.title = NSLocalizedString("Error", comment: "Title next to the rate, that indicates an error due connection problems.")
