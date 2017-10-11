@@ -115,7 +115,7 @@ class StatusMenuController: NSObject {
 		self.rateState = state
 		switch self.rateState {
 		case .showing(let coin):
-			self.statusItem.title = coin.price_usd.formattedString
+			self.statusItem.title = coin.price_usd.formattedWithCurrencySymbol
             self.lastUpdateMenuButton.title = coin.last_updated.formattedDate
             self.statisticMenuView.configureWith(coin: coin)
 		case .updating(let coin):

@@ -28,9 +28,9 @@ class StatisticMenuView: NSView {
         
         currencyNameLabel.stringValue = coin.name
         
-        percentChange1hLabel.stringValue = coin.percentChange1h
-        percentChange24hLabel.stringValue = coin.percentChange24h
-        percentChange7dLabel.stringValue = coin.percentChange7d
+        percentChange1hLabel.stringValue = coin.percentChange1h.formattedWithPercentSymbol
+        percentChange24hLabel.stringValue = coin.percentChange24h.formattedWithPercentSymbol
+        percentChange7dLabel.stringValue = coin.percentChange7d.formattedWithPercentSymbol
         
         percentChange1hView.setBackgroundColorFor(trend: coin.percentChange1h)
         percentChange24hView.setBackgroundColorFor(trend: coin.percentChange24h)
