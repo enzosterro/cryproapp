@@ -5,4 +5,4 @@
 CryptoApp is a small tool for macOS to help you stay on top with all popular cryptocurrency prices. All rates fetched from [Coin Market Cap](https://api.coinmarketcap.com).
 
 # Screenshot
-![alt text](https://raw.githubusercontent.com/enzosterro/cryptoapp/master/Images/screenshot.jpg "Screenshot")
+![alt text](Images/screenshot.jpg?raw=true "Screenshot")
