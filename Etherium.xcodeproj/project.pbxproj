@@ -17,12 +17,23 @@
 		C6D88C801F83CAA600120A58 /* Double+FormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */; };
 		F7824CAC1F86484F000C0594 /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */; };
 		F7824CAE1F867284000C0594 /* TickerURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7824CAD1F867284000C0594 /* TickerURLManager.swift */; };
+		F79B01341F8E0DDC007D6B83 /* StringFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B01331F8E0DDC007D6B83 /* StringFormattingTests.swift */; };
 		F7A5D3B41F8B5C5E00DE7CEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A5D3B31F8B596500DE7CEE /* Assets.xcassets */; };
 		F7C1E5741F876F1300FF0893 /* StatisticMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E5731F876F1300FF0893 /* StatisticMenuView.swift */; };
 		F7C1E5761F87730200FF0893 /* NSView+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E5751F87730200FF0893 /* NSView+BackgroundColor.swift */; };
 		F7C1E57A1F877A2D00FF0893 /* PercentChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E5791F877A2D00FF0893 /* PercentChangeView.swift */; };
 		F7C1E57C1F87921A00FF0893 /* NSColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C1E57B1F87921A00FF0893 /* NSColor+Custom.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F79B01361F8E0DDC007D6B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C661D2AC1F827EC300359B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C661D2B31F827EC300359B56;
+			remoteInfo = Etherium;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C625BC3E1F836D3200DA41EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +51,9 @@
 		C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormattedDate.swift"; sourceTree = "<group>"; };
 		F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
 		F7824CAD1F867284000C0594 /* TickerURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerURLManager.swift; sourceTree = "<group>"; };
+		F79B01311F8E0DDC007D6B83 /* EtheriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtheriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79B01331F8E0DDC007D6B83 /* StringFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormattingTests.swift; sourceTree = "<group>"; };
+		F79B01351F8E0DDC007D6B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A5D3B31F8B596500DE7CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7C1E5731F876F1300FF0893 /* StatisticMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticMenuView.swift; sourceTree = "<group>"; };
 		F7C1E5751F87730200FF0893 /* NSView+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+BackgroundColor.swift"; sourceTree = "<group>"; };
@@ -55,6 +69,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F79B012E1F8E0DDC007D6B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +85,7 @@
 				C661D2B61F827EC300359B56 /* Etherium */,
 				C6D88C7B1F838B4100120A58 /* LICENSE */,
 				C6D88C7C1F838B4100120A58 /* README.md */,
+				F79B01321F8E0DDC007D6B83 /* EtheriumTests */,
 				C661D2B51F827EC300359B56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				C661D2B41F827EC300359B56 /* Etherium.app */,
+				F79B01311F8E0DDC007D6B83 /* EtheriumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +187,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F79B01321F8E0DDC007D6B83 /* EtheriumTests */ = {
+			isa = PBXGroup;
+			children = (
+				F79B01331F8E0DDC007D6B83 /* StringFormattingTests.swift */,
+				F79B01351F8E0DDC007D6B83 /* Info.plist */,
+			);
+			path = EtheriumTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,6 +216,24 @@
 			productReference = C661D2B41F827EC300359B56 /* Etherium.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F79B01301F8E0DDC007D6B83 /* EtheriumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79B013A1F8E0DDC007D6B83 /* Build configuration list for PBXNativeTarget "EtheriumTests" */;
+			buildPhases = (
+				F79B012D1F8E0DDC007D6B83 /* Sources */,
+				F79B012E1F8E0DDC007D6B83 /* Frameworks */,
+				F79B012F1F8E0DDC007D6B83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F79B01371F8E0DDC007D6B83 /* PBXTargetDependency */,
+			);
+			name = EtheriumTests;
+			productName = EtheriumTests;
+			productReference = F79B01311F8E0DDC007D6B83 /* EtheriumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +253,11 @@
 							};
 						};
 					};
+					F79B01301F8E0DDC007D6B83 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C661D2B31F827EC300359B56;
+					};
 				};
 			};
 			buildConfigurationList = C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "Etherium" */;
@@ -219,6 +274,7 @@
 			projectRoot = "";
 			targets = (
 				C661D2B31F827EC300359B56 /* Etherium */,
+				F79B01301F8E0DDC007D6B83 /* EtheriumTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +286,13 @@
 			files = (
 				F7A5D3B41F8B5C5E00DE7CEE /* Assets.xcassets in Resources */,
 				C625BC401F836DA900DA41EF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79B012F1F8E0DDC007D6B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +319,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F79B012D1F8E0DDC007D6B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79B01341F8E0DDC007D6B83 /* StringFormattingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F79B01371F8E0DDC007D6B83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C661D2B31F827EC300359B56 /* Etherium */;
+			targetProxy = F79B01361F8E0DDC007D6B83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C661D2BB1F827EC300359B56 /* MainMenu.xib */ = {
@@ -408,6 +487,40 @@
 			};
 			name = Release;
 		};
+		F79B01381F8E0DDC007D6B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3H7RS6HW3;
+				INFOPLIST_FILE = EtheriumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.EtheriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Etherium.app/Contents/MacOS/Etherium";
+			};
+			name = Debug;
+		};
+		F79B01391F8E0DDC007D6B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3H7RS6HW3;
+				INFOPLIST_FILE = EtheriumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.EtheriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Etherium.app/Contents/MacOS/Etherium";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,6 +538,15 @@
 			buildConfigurations = (
 				C661D2C31F827EC300359B56 /* Debug */,
 				C661D2C41F827EC300359B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F79B013A1F8E0DDC007D6B83 /* Build configuration list for PBXNativeTarget "EtheriumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79B01381F8E0DDC007D6B83 /* Debug */,
+				F79B01391F8E0DDC007D6B83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
