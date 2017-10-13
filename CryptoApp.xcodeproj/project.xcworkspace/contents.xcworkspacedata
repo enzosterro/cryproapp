@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Etherium.xcodeproj">
+      location = "self:/Users/enzo/Projects/Cryproapp/CryptoApp.xcodeproj">
    </FileRef>
 </Workspace>

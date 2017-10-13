@@ -38,10 +38,10 @@
 /* Begin PBXFileReference section */
 		C625BC3E1F836D3200DA41EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C625BC411F837DC800DA41EF /* CoinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModels.swift; sourceTree = "<group>"; };
-		C661D2B41F827EC300359B56 /* Etherium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etherium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C661D2B41F827EC300359B56 /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C661D2B71F827EC300359B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C661D2BC1F827EC300359B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C661D2BF1F827EC300359B56 /* Etherium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Etherium.entitlements; sourceTree = "<group>"; };
+		C661D2BF1F827EC300359B56 /* CryptoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CryptoApp.entitlements; sourceTree = "<group>"; };
 		C661D2C51F827FBA00359B56 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		C661D2C71F82841200359B56 /* CryptoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAPI.swift; sourceTree = "<group>"; };
 		C661D2C91F82A57D00359B56 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		C6D88C7F1F83CAA600120A58 /* Double+FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+FormattedDate.swift"; sourceTree = "<group>"; };
 		F7824CAB1F86484F000C0594 /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
 		F7824CAD1F867284000C0594 /* TickerURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerURLManager.swift; sourceTree = "<group>"; };
-		F79B01311F8E0DDC007D6B83 /* EtheriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtheriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79B01311F8E0DDC007D6B83 /* CryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79B01331F8E0DDC007D6B83 /* StringFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormattingTests.swift; sourceTree = "<group>"; };
 		F79B01351F8E0DDC007D6B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A5D3B31F8B596500DE7CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		C661D2AB1F827EC300359B56 = {
 			isa = PBXGroup;
 			children = (
-				C661D2B61F827EC300359B56 /* Etherium */,
+				C661D2B61F827EC300359B56 /* CryptoApp */,
 				C6D88C7B1F838B4100120A58 /* LICENSE */,
 				C6D88C7C1F838B4100120A58 /* README.md */,
 				F79B01321F8E0DDC007D6B83 /* EtheriumTests */,
@@ -93,13 +93,13 @@
 		C661D2B51F827EC300359B56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C661D2B41F827EC300359B56 /* Etherium.app */,
-				F79B01311F8E0DDC007D6B83 /* EtheriumTests.xctest */,
+				C661D2B41F827EC300359B56 /* CryptoApp.app */,
+				F79B01311F8E0DDC007D6B83 /* CryptoAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C661D2B61F827EC300359B56 /* Etherium */ = {
+		C661D2B61F827EC300359B56 /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
 				C661D2CD1F82AE5D00359B56 /* Model */,
@@ -107,7 +107,7 @@
 				C661D2D11F82B0B100359B56 /* Helpers */,
 				C661D2D61F82B29B00359B56 /* Supporting Files */,
 			);
-			path = Etherium;
+			path = CryptoApp;
 			sourceTree = "<group>";
 		};
 		C661D2CD1F82AE5D00359B56 /* Model */ = {
@@ -182,7 +182,7 @@
 			children = (
 				F7A5D3B31F8B596500DE7CEE /* Assets.xcassets */,
 				C625BC3E1F836D3200DA41EF /* Info.plist */,
-				C661D2BF1F827EC300359B56 /* Etherium.entitlements */,
+				C661D2BF1F827EC300359B56 /* CryptoApp.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C661D2B31F827EC300359B56 /* Etherium */ = {
+		C661D2B31F827EC300359B56 /* CryptoApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C661D2C21F827EC300359B56 /* Build configuration list for PBXNativeTarget "Etherium" */;
+			buildConfigurationList = C661D2C21F827EC300359B56 /* Build configuration list for PBXNativeTarget "CryptoApp" */;
 			buildPhases = (
 				C661D2B01F827EC300359B56 /* Sources */,
 				C661D2B11F827EC300359B56 /* Frameworks */,
@@ -211,14 +211,14 @@
 			);
 			dependencies = (
 			);
-			name = Etherium;
+			name = CryptoApp;
 			productName = Etherium;
-			productReference = C661D2B41F827EC300359B56 /* Etherium.app */;
+			productReference = C661D2B41F827EC300359B56 /* CryptoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F79B01301F8E0DDC007D6B83 /* EtheriumTests */ = {
+		F79B01301F8E0DDC007D6B83 /* CryptoAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F79B013A1F8E0DDC007D6B83 /* Build configuration list for PBXNativeTarget "EtheriumTests" */;
+			buildConfigurationList = F79B013A1F8E0DDC007D6B83 /* Build configuration list for PBXNativeTarget "CryptoAppTests" */;
 			buildPhases = (
 				F79B012D1F8E0DDC007D6B83 /* Sources */,
 				F79B012E1F8E0DDC007D6B83 /* Frameworks */,
@@ -229,9 +229,9 @@
 			dependencies = (
 				F79B01371F8E0DDC007D6B83 /* PBXTargetDependency */,
 			);
-			name = EtheriumTests;
+			name = CryptoAppTests;
 			productName = EtheriumTests;
-			productReference = F79B01311F8E0DDC007D6B83 /* EtheriumTests.xctest */;
+			productReference = F79B01311F8E0DDC007D6B83 /* CryptoAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "Etherium" */;
+			buildConfigurationList = C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "CryptoApp" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -273,8 +273,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C661D2B31F827EC300359B56 /* Etherium */,
-				F79B01301F8E0DDC007D6B83 /* EtheriumTests */,
+				C661D2B31F827EC300359B56 /* CryptoApp */,
+				F79B01301F8E0DDC007D6B83 /* CryptoAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +332,7 @@
 /* Begin PBXTargetDependency section */
 		F79B01371F8E0DDC007D6B83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C661D2B31F827EC300359B56 /* Etherium */;
+			target = C661D2B31F827EC300359B56 /* CryptoApp */;
 			targetProxy = F79B01361F8E0DDC007D6B83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -459,13 +459,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Etherium/Etherium.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CryptoApp/CryptoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G3H7RS6HW3;
-				INFOPLIST_FILE = Etherium/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CryptoApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.Etherium;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.cryptoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -475,13 +475,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Etherium/Etherium.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CryptoApp/CryptoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G3H7RS6HW3;
-				INFOPLIST_FILE = Etherium/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CryptoApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.Etherium;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.cryptoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -524,7 +524,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "Etherium" */ = {
+		C661D2AF1F827EC300359B56 /* Build configuration list for PBXProject "CryptoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C661D2C01F827EC300359B56 /* Debug */,
@@ -533,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C661D2C21F827EC300359B56 /* Build configuration list for PBXNativeTarget "Etherium" */ = {
+		C661D2C21F827EC300359B56 /* Build configuration list for PBXNativeTarget "CryptoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C661D2C31F827EC300359B56 /* Debug */,
@@ -542,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F79B013A1F8E0DDC007D6B83 /* Build configuration list for PBXNativeTarget "EtheriumTests" */ = {
+		F79B013A1F8E0DDC007D6B83 /* Build configuration list for PBXNativeTarget "CryptoAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F79B01381F8E0DDC007D6B83 /* Debug */,
