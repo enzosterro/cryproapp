@@ -1,6 +1,6 @@
 //
-//  EtheriumTests.swift
-//  EtheriumTests
+//  CryptoAppTests.swift
+//  CryptoAppTests
 //
 //  Created by Enzo Sterro on 11/10/2017.
 //  Copyright © 2017 Enzo Sterro. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-@testable import Etherium
+@testable import CryptoApp
 
 class StringFormattingTests: XCTestCase {
     

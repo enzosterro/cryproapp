@@ -79,13 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C65AF7A71F90ED270015987F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C661D2B71F827EC300359B56 /* AppDelegate.swift */,
+				C661D2C51F827FBA00359B56 /* StatusMenuController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C661D2AB1F827EC300359B56 = {
 			isa = PBXGroup;
 			children = (
 				C661D2B61F827EC300359B56 /* CryptoApp */,
 				C6D88C7B1F838B4100120A58 /* LICENSE */,
 				C6D88C7C1F838B4100120A58 /* README.md */,
-				F79B01321F8E0DDC007D6B83 /* EtheriumTests */,
+				F79B01321F8E0DDC007D6B83 /* CryptoAppTests */,
 				C661D2B51F827EC300359B56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +113,7 @@
 			children = (
 				C661D2CD1F82AE5D00359B56 /* Model */,
 				C661D2CE1F82AEDA00359B56 /* Views */,
+				C65AF7A71F90ED270015987F /* Controller */,
 				C661D2D11F82B0B100359B56 /* Helpers */,
 				C661D2D61F82B29B00359B56 /* Supporting Files */,
 			);
@@ -122,29 +132,11 @@
 		C661D2CE1F82AEDA00359B56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C661D2CF1F82AEE500359B56 /* UI */,
-				C661D2D01F82B09F00359B56 /* Main */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C661D2CF1F82AEE500359B56 /* UI */ = {
-			isa = PBXGroup;
-			children = (
 				C661D2BB1F827EC300359B56 /* MainMenu.xib */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		C661D2D01F82B09F00359B56 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C661D2B71F827EC300359B56 /* AppDelegate.swift */,
-				C661D2C51F827FBA00359B56 /* StatusMenuController.swift */,
 				F7C1E5731F876F1300FF0893 /* StatisticMenuView.swift */,
 				F7C1E5791F877A2D00FF0893 /* PercentChangeView.swift */,
 			);
-			path = Main;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C661D2D11F82B0B100359B56 /* Helpers */ = {
@@ -187,13 +179,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F79B01321F8E0DDC007D6B83 /* EtheriumTests */ = {
+		F79B01321F8E0DDC007D6B83 /* CryptoAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				F79B01331F8E0DDC007D6B83 /* StringFormattingTests.swift */,
 				F79B01351F8E0DDC007D6B83 /* Info.plist */,
 			);
-			path = EtheriumTests;
+			path = CryptoAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,13 +486,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G3H7RS6HW3;
-				INFOPLIST_FILE = EtheriumTests/Info.plist;
+				INFOPLIST_FILE = CryptoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.EtheriumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.cryptoapptests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Etherium.app/Contents/MacOS/Etherium";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoApp.app/Contents/MacOS/CryptoApp";
 			};
 			name = Debug;
 		};
@@ -511,13 +503,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G3H7RS6HW3;
-				INFOPLIST_FILE = EtheriumTests/Info.plist;
+				INFOPLIST_FILE = CryptoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.EtheriumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enzosterro.cryptoapptests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Etherium.app/Contents/MacOS/Etherium";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoApp.app/Contents/MacOS/CryptoApp";
 			};
 			name = Release;
 		};

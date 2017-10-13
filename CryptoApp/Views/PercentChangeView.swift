@@ -1,6 +1,6 @@
 //
 //  PercentChangeView.swift
-//  Etherium
+//  CryptoApp
 //
 //  Created by Enzo Sterro on 06/10/2017.
 //  Copyright © 2017 Enzo Sterro. All rights reserved.
