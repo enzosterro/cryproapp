@@ -8,60 +8,62 @@
 
 import Foundation
 
-enum Result<T> {
-	case success(T)
-	case error(Error)
-	case customError(String)
-}
 
-class CryptoAPI {
+struct CryptoAPI {
 	
-    func fetchRatesFor(topCurrencies: Bool = false, currency: CoinModel.name = .undefined, success: @escaping (Result<[Coin]>) -> Void) {
+    static func fetchRates(currency: String, then: @escaping (CryptoAPIResult<Coin?>) -> Void) {
 		let session = URLSession.shared
-        var url: URL!
-        
-        if topCurrencies {
-            url = URL(string: TickerURLManager.baseURL + TickerURLManager.topCurrencies)
-        } else {
-            url = URL(string: TickerURLManager.baseURL + currency.rawValue)
-        }
-        
-		let task = session.dataTask(with: url!) { data, response, error in
+        let url = Ticker.baseURL.appendingPathComponent(currency)
+		session.dataTask(with: url) { data, response, error in
 			if let explicitError = error {
-				success(.error(explicitError))
+				then(.error(explicitError))
 			}
 			
 			if let httpResponce = response as? HTTPURLResponse {
 				switch httpResponce.statusCode {
 				case 200:
-					if let data = data {
-						do {
-							let json = try JSONSerialization.jsonObject(with: data, options: [])
-							if let jsonDictionary = self.JSONtoArrayOfDict(json: json) {
-								var coins = [Coin]()
-								for element in jsonDictionary {
-									if let coin = Coin(json: element) {
-										coins.append(coin)
-									}
-								}
-								success(Result.success(coins))
-							}
-						} catch let error {
-							success(.error(error))
-						}
-					}
+                    guard let data = data else { return }
+                    do {
+                        let coin = try JSONDecoder().decode([Coin].self, from: data)
+                        then(CryptoAPIResult.success(coin.first))
+                    }
+                    catch {
+                        then(.error(error))
+                        print(error)
+                    }
 				case 401:
-					success(.customError("CoinAPI returned an 'unauthorized' response. Did you set your API key?"))
+					then(.customError("CoinAPI returned an 'unauthorized' response. Did you set your API key?"))
+                case 404:
+                    then(.customError("CoinAPI returned a 'not found' response. Unable to find rate for the \(currency)."))
 				default:
-					success(.customError("CoinAPI returned response: \(httpResponce.statusCode) \(HTTPURLResponse.localizedString(forStatusCode: httpResponce.statusCode))"))
+					then(.customError("CoinAPI returned response: \(httpResponce.statusCode) \(HTTPURLResponse.localizedString(forStatusCode: httpResponce.statusCode))"))
 				}
 			}
-		}
-		task.resume()
+		}.resume()
 	}
-	
-	private func JSONtoArrayOfDict(json: Any) -> [[String: Any]]? {
-		return json as? [[String: Any]] ?? nil
-	}
-	
+
+    static func fetchTopCurrencies(then: @escaping (CryptoAPIResult<[Coin]>) -> Void) {
+        let session = URLSession.shared
+
+        session.dataTask(with: Ticker.baseURLForTopCurrencies) { data, response, error in
+            if let httpResponce = response as? HTTPURLResponse {
+                switch httpResponce.statusCode {
+                case 200:
+                    guard let data = data else { return }
+                    do {
+                        let coins = try JSONDecoder().decode([Coin].self, from: data)
+                        then(CryptoAPIResult.success(coins))
+                    }
+                    catch {
+                        print(error)
+                    }
+                case 401:
+                    then(.customError("CoinAPI returned an 'unauthorized' response. Did you set your API key?"))
+                default:
+                    then(.customError("CoinAPI returned response: \(httpResponce.statusCode) \(HTTPURLResponse.localizedString(forStatusCode: httpResponce.statusCode))"))
+                }
+            }
+        }.resume()
+    }
+
 }

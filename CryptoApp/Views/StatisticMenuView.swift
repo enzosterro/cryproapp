@@ -8,32 +8,33 @@
 
 import Cocoa
 
-class StatisticMenuView: NSView {
 
-    @IBOutlet weak var currencyNameLabel: NSTextField!
+final class StatisticMenuView: NSView {
+
+    // MARK: Outlets
+
+    @IBOutlet private weak var currencyNameLabel: NSTextField!
     
-    @IBOutlet weak var percentChange1hView: PercentChangeView!
-    @IBOutlet weak var percentChange24hView: PercentChangeView!
-    @IBOutlet weak var percentChange7dView: PercentChangeView!
+    @IBOutlet private weak var percentChange1hView: PercentChangeView!
+    @IBOutlet private weak var percentChange24hView: PercentChangeView!
+    @IBOutlet private weak var percentChange7dView: PercentChangeView!
     
-    @IBOutlet weak var percentChange1hLabel: NSTextField!
-    @IBOutlet weak var percentChange24hLabel: NSTextField!
-    @IBOutlet weak var percentChange7dLabel: NSTextField!
-    
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-    }
-    
-    func configureWith(coin: Coin) {
+    @IBOutlet private weak var percentChange1hLabel: NSTextField!
+    @IBOutlet private weak var percentChange24hLabel: NSTextField!
+    @IBOutlet private weak var percentChange7dLabel: NSTextField!
+
+    // MARK: Render
         
+    func render(_ coin: Coin) {
         currencyNameLabel.stringValue = coin.name
         
-        percentChange1hLabel.stringValue = coin.percentChange1h.formattedWithPercentSymbol
-        percentChange24hLabel.stringValue = coin.percentChange24h.formattedWithPercentSymbol
-        percentChange7dLabel.stringValue = coin.percentChange7d.formattedWithPercentSymbol
+        percentChange1hLabel.stringValue = coin.percentChange1h.format(with: .percent)
+        percentChange24hLabel.stringValue = coin.percentChange24h.format(with: .percent)
+        percentChange7dLabel.stringValue = coin.percentChange7d.format(with: .percent)
         
-        percentChange1hView.setBackgroundColorFor(trend: coin.percentChange1h)
-        percentChange24hView.setBackgroundColorFor(trend: coin.percentChange24h)
-        percentChange7dView.setBackgroundColorFor(trend: coin.percentChange7d)
+        percentChange1hView.setBackgroundColor(for: coin.percentChange1h)
+        percentChange24hView.setBackgroundColor(for: coin.percentChange24h)
+        percentChange7dView.setBackgroundColor(for: coin.percentChange7d)
     }
+    
 }

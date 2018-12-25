@@ -6,8 +6,35 @@
 //  Copyright © 2017 Enzo Sterro. All rights reserved.
 //
 
+import Foundation
 
-struct TickerURLManager {
-    static let baseURL = "https://api.coinmarketcap.com/v1/ticker/"
-    static let topCurrencies = "?limit=100"
+struct Ticker {
+
+    private struct Constants {
+
+        static let baseURLScheme = "https"
+        static let baseURLHost = "api.coinmarketcap.com"
+        static let apiPath = "/v1/ticker/"
+
+    }
+
+    private static var baseURLComponents: URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = Constants.baseURLScheme
+        urlComponents.host = Constants.baseURLHost
+        urlComponents.path = Constants.apiPath
+        return urlComponents
+    }
+
+    static var baseURL: URL {
+        return baseURLComponents.url!
+    }
+
+    static var baseURLForTopCurrencies: URL {
+        var baseURLComponents = self.baseURLComponents
+        let queryItem = URLQueryItem(name: "limit", value: "100")
+        baseURLComponents.queryItems = [queryItem]
+        return baseURLComponents.url!
+    }
+
 }

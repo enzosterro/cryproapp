@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,9 +13,9 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Etherium" customModuleProvider="target"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CryptoApp" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="qOh-PI-6Ie" customClass="StatusMenuController" customModule="Etherium" customModuleProvider="target">
+        <customObject id="qOh-PI-6Ie" customClass="StatusMenuController" customModule="CryptoApp" customModuleProvider="target">
             <connections>
                 <outlet property="currenciesMenuAsset" destination="FpR-VE-7nO" id="hnd-vR-Nyl"/>
                 <outlet property="lastUpdateMenuButton" destination="gz7-4F-Uyq" id="Bys-7h-Hc2"/>
@@ -25,7 +25,7 @@
                 <outlet property="statusMenu" destination="Kt7-j4-uOs" id="937-qQ-GId"/>
             </connections>
         </customObject>
-        <menu id="Kt7-j4-uOs">
+        <menu autoenablesItems="NO" id="Kt7-j4-uOs">
             <items>
                 <menuItem title="Last Updated: Never" enabled="NO" id="gz7-4F-Uyq">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -39,21 +39,18 @@
                     <menu key="submenu" title="Currency" id="jG9-Zp-iUU"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Yhe-dE-HzB"/>
-                <menuItem title="Force Refresh" id="Km7-yn-GyV">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Force Refresh" keyEquivalent="r" id="Km7-yn-GyV">
                     <connections>
                         <action selector="refreshClicked:" target="qOh-PI-6Ie" id="axq-C5-DKy"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Pause Updates" id="5nA-N2-YI5">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Pause Updates" keyEquivalent="s" id="5nA-N2-YI5">
                     <connections>
                         <action selector="statusChangeClicked:" target="qOh-PI-6Ie" id="ege-rX-e8F"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="6O8-db-qN5"/>
-                <menuItem title="Quit" id="jYr-ou-LWf">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Quit" keyEquivalent="q" id="jYr-ou-LWf">
                     <connections>
                         <action selector="quitClicked:" target="qOh-PI-6Ie" id="haC-4y-7yr"/>
                     </connections>
@@ -61,85 +58,95 @@
             </items>
             <point key="canvasLocation" x="64" y="113.5"/>
         </menu>
-        <customView id="U0Y-S8-FI5" customClass="StatisticMenuView" customModule="Etherium" customModuleProvider="target">
+        <customView id="U0Y-S8-FI5" customClass="StatisticMenuView" customModule="CryptoApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="290" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWQ-oQ-QEV">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWQ-oQ-QEV">
                     <rect key="frame" x="18" y="71" width="254" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Ethereum" id="yq0-p7-zMB">
-                        <font key="font" metaFont="menuBar"/>
+                        <font key="font" size="15" name=".AppleSystemUIFont"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCM-zt-h72" customClass="PercentChangeView" customModule="Etherium" customModuleProvider="target">
-                    <rect key="frame" x="20" y="20" width="70" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="gCM-zt-h72" customClass="PercentChangeView" customModule="CryptoApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="20" width="70" height="26"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-IR-euK">
-                            <rect key="frame" x="3" y="5" width="64" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" id="5Vl-ik-tyb">
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-IR-euK">
+                            <rect key="frame" x="5" y="5" width="60" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="0.0" drawsBackground="YES" usesSingleLineMode="YES" id="5Vl-ik-tyb">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </textFieldCell>
                         </textField>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="hy8-IR-euK" firstAttribute="centerX" secondItem="gCM-zt-h72" secondAttribute="centerX" id="DUT-JL-p5u"/>
+                        <constraint firstItem="hy8-IR-euK" firstAttribute="centerY" secondItem="gCM-zt-h72" secondAttribute="centerY" id="GKI-Tb-H3L"/>
+                        <constraint firstAttribute="width" constant="70" id="PF5-a3-XI8"/>
+                        <constraint firstAttribute="height" constant="26" id="QaG-wf-3wl"/>
+                        <constraint firstItem="hy8-IR-euK" firstAttribute="leading" secondItem="gCM-zt-h72" secondAttribute="leading" constant="5" id="RKZ-7z-hp5"/>
+                    </constraints>
                 </customView>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-Cd-71A" customClass="PercentChangeView" customModule="Etherium" customModuleProvider="target">
-                    <rect key="frame" x="110" y="20" width="70" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ffD-Cd-71A" customClass="PercentChangeView" customModule="CryptoApp" customModuleProvider="target">
+                    <rect key="frame" x="110" y="20" width="70" height="26"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJm-5h-rq3">
-                            <rect key="frame" x="3" y="5" width="64" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" id="qPF-NO-gEt">
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJm-5h-rq3">
+                            <rect key="frame" x="22" y="5" width="27" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" drawsBackground="YES" id="qPF-NO-gEt">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </textFieldCell>
                         </textField>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="LLm-Oh-0Fy"/>
+                        <constraint firstItem="rJm-5h-rq3" firstAttribute="centerY" secondItem="ffD-Cd-71A" secondAttribute="centerY" id="UBd-Iy-wbq"/>
+                        <constraint firstAttribute="width" constant="70" id="d0Y-EA-dir"/>
+                        <constraint firstItem="rJm-5h-rq3" firstAttribute="centerX" secondItem="ffD-Cd-71A" secondAttribute="centerX" id="pR9-re-NPn"/>
+                    </constraints>
                 </customView>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N82-Je-OWy" customClass="PercentChangeView" customModule="Etherium" customModuleProvider="target">
-                    <rect key="frame" x="200" y="20" width="70" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="N82-Je-OWy" customClass="PercentChangeView" customModule="CryptoApp" customModuleProvider="target">
+                    <rect key="frame" x="200" y="20" width="70" height="26"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-SC-tit">
-                            <rect key="frame" x="3" y="5" width="64" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" id="e1H-hV-ebR">
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-SC-tit">
+                            <rect key="frame" x="5" y="5" width="60" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0" drawsBackground="YES" id="e1H-hV-ebR">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </textFieldCell>
                         </textField>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="zZg-SC-tit" firstAttribute="centerX" secondItem="N82-Je-OWy" secondAttribute="centerX" id="KYn-4I-sfq"/>
+                        <constraint firstItem="zZg-SC-tit" firstAttribute="centerY" secondItem="N82-Je-OWy" secondAttribute="centerY" id="bcB-yH-id5"/>
+                        <constraint firstAttribute="width" constant="70" id="nw0-kE-J88"/>
+                        <constraint firstAttribute="height" constant="26" id="tFI-Di-eV8"/>
+                        <constraint firstItem="zZg-SC-tit" firstAttribute="leading" secondItem="N82-Je-OWy" secondAttribute="leading" constant="5" id="wS7-SZ-L5O"/>
+                    </constraints>
                 </customView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-7G-vZK">
-                    <rect key="frame" x="18" y="46" width="74" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-7G-vZK">
+                    <rect key="frame" x="18" y="47" width="74" height="15"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="1 hour" id="pbG-9M-s4R">
                         <font key="font" metaFont="user"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-ED-h7k">
-                    <rect key="frame" x="108" y="46" width="74" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-ED-h7k">
+                    <rect key="frame" x="108" y="47" width="74" height="15"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="24 hours" id="bD9-Ma-m0p">
                         <font key="font" metaFont="user"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-E1-hcv">
-                    <rect key="frame" x="198" y="46" width="74" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-E1-hcv">
+                    <rect key="frame" x="198" y="47" width="74" height="15"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="7 days" id="yws-xv-AQa">
                         <font key="font" metaFont="user"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -147,6 +154,32 @@
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="gCM-zt-h72" firstAttribute="top" secondItem="ffD-Cd-71A" secondAttribute="top" id="3Jy-cC-8Hx"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="trailing" secondItem="N82-Je-OWy" secondAttribute="trailing" id="7fb-tl-kFC"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="trailing" secondItem="DWQ-oQ-QEV" secondAttribute="trailing" id="7ka-kD-QWM"/>
+                <constraint firstAttribute="trailing" secondItem="DWQ-oQ-QEV" secondAttribute="trailing" constant="20" id="CSq-vY-bm4"/>
+                <constraint firstItem="gCM-zt-h72" firstAttribute="top" secondItem="N82-Je-OWy" secondAttribute="top" id="DIP-ad-gGO"/>
+                <constraint firstItem="ffD-Cd-71A" firstAttribute="trailing" secondItem="qPf-ED-h7k" secondAttribute="trailing" id="Gvb-HC-7h4"/>
+                <constraint firstItem="p7w-7G-vZK" firstAttribute="leading" secondItem="gCM-zt-h72" secondAttribute="leading" id="J4a-hY-XE9"/>
+                <constraint firstItem="ffD-Cd-71A" firstAttribute="leading" secondItem="gCM-zt-h72" secondAttribute="trailing" constant="20" id="KBU-zU-dVv"/>
+                <constraint firstItem="DWQ-oQ-QEV" firstAttribute="top" secondItem="U0Y-S8-FI5" secondAttribute="top" constant="10" id="KgB-Ku-NwP"/>
+                <constraint firstItem="gCM-zt-h72" firstAttribute="bottom" secondItem="ffD-Cd-71A" secondAttribute="bottom" id="TwD-Aq-bGg"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="leading" secondItem="qPf-ED-h7k" secondAttribute="trailing" constant="20" id="ZUJ-34-9qo"/>
+                <constraint firstItem="qPf-ED-h7k" firstAttribute="leading" secondItem="p7w-7G-vZK" secondAttribute="trailing" constant="20" id="ZXD-Ji-g9X"/>
+                <constraint firstItem="DWQ-oQ-QEV" firstAttribute="leading" secondItem="U0Y-S8-FI5" secondAttribute="leading" constant="20" id="cDe-3Z-67H"/>
+                <constraint firstItem="p7w-7G-vZK" firstAttribute="leading" secondItem="DWQ-oQ-QEV" secondAttribute="leading" id="e7v-q4-tDF"/>
+                <constraint firstItem="gCM-zt-h72" firstAttribute="bottom" secondItem="N82-Je-OWy" secondAttribute="bottom" id="kHk-Z0-Cic"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="firstBaseline" secondItem="p7w-7G-vZK" secondAttribute="firstBaseline" id="nlS-qD-rMy"/>
+                <constraint firstItem="p7w-7G-vZK" firstAttribute="trailing" secondItem="gCM-zt-h72" secondAttribute="trailing" id="oq5-S4-3AH"/>
+                <constraint firstItem="N82-Je-OWy" firstAttribute="leading" secondItem="ffD-Cd-71A" secondAttribute="trailing" constant="20" id="ouf-Je-J4L"/>
+                <constraint firstItem="gCM-zt-h72" firstAttribute="top" secondItem="DWQ-oQ-QEV" secondAttribute="bottom" constant="25" id="ozX-Cc-nYY"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="top" secondItem="DWQ-oQ-QEV" secondAttribute="bottom" constant="9" id="pGx-NL-UKF"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="firstBaseline" secondItem="qPf-ED-h7k" secondAttribute="firstBaseline" id="t6n-ge-TM6"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="baseline" secondItem="qPf-ED-h7k" secondAttribute="baseline" id="tBe-Gy-Nio"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="leading" secondItem="N82-Je-OWy" secondAttribute="leading" id="tE3-l1-DOj"/>
+                <constraint firstItem="vTe-E1-hcv" firstAttribute="baseline" secondItem="p7w-7G-vZK" secondAttribute="baseline" id="vXy-XQ-qmw"/>
+            </constraints>
             <connections>
                 <outlet property="currencyNameLabel" destination="DWQ-oQ-QEV" id="K5g-yp-ELF"/>
                 <outlet property="percentChange1hLabel" destination="hy8-IR-euK" id="hnV-Qh-FT9"/>
@@ -158,5 +191,6 @@
             </connections>
             <point key="canvasLocation" x="359" y="87"/>
         </customView>
+        <userDefaultsController representsSharedInstance="YES" id="bvr-SB-N1A"/>
     </objects>
 </document>

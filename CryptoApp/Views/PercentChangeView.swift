@@ -8,16 +8,21 @@
 
 import Cocoa
 
-class PercentChangeView: NSView {
+
+final class PercentChangeView: NSView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        wantsLayer = true
+
         layer?.masksToBounds = true
         layer?.cornerRadius = 4
     }
-    
-    func setBackgroundColorFor(trend: String) {
-        self.backgroundColor = !trend.contains("-") ? .trendGreen : .trendRed
+
+    func setBackgroundColor(for trend: String) {
+        wantsLayer = true
+        layer?.backgroundColor = trend.contains("-")
+            ? NSColor.red.withAlphaComponent(0.3).cgColor
+            : NSColor.green.withAlphaComponent(0.3).cgColor
     }
+
 }
