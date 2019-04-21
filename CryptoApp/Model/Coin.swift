@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Foundation
 
 struct Coin: Decodable {
 
@@ -42,20 +41,25 @@ struct Coin: Decodable {
     }
 
     init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decode(String.self, forKey: .id)
-        name = try values.decode(String.self, forKey: .name)
-        symbol = try values.decode(String.self, forKey: .symbol)
-        rank = try values.decode(String.self, forKey: .rank)
-        priceUSD = try values.decode(String.self, forKey: .priceUSD)
-        priceBTC = try values.decode(String.self, forKey: .priceBTC)
-        dayVolumeUSD = try values.decode(String.self, forKey: .dayVolumeUSD)
-        marketCapUSD = try values.decode(String.self, forKey: .marketCapUSD)
-        availableSupply = try values.decode(String.self, forKey: .availableSupply)
-        percentChange1h = try values.decode(String.self, forKey: .percentChange1h)
-        percentChange24h = try values.decode(String.self, forKey: .percentChange24h)
-        percentChange7d = try values.decode(String.self, forKey: .percentChange7d)
-        lastUpdated = try values.decode(String.self, forKey: .lastUpdated)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        let decode: ((CodingKeys) throws -> String) = {
+            return try container.decode(String.self, forKey: $0)
+        }
+
+        id = try decode(.id)
+        name = try decode(.name)
+        symbol = try decode(.symbol)
+        rank = try decode(.rank)
+        priceUSD = try decode(.priceUSD)
+        priceBTC = try decode(.priceBTC)
+        dayVolumeUSD = try decode(.dayVolumeUSD)
+        marketCapUSD = try decode(.marketCapUSD)
+        availableSupply = try decode(.availableSupply)
+        percentChange1h = try decode(.percentChange1h)
+        percentChange24h = try decode(.percentChange24h)
+        percentChange7d = try decode(.percentChange7d)
+        lastUpdated = try decode(.lastUpdated)
     }
 
 }
