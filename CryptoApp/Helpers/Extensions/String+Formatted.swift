@@ -12,9 +12,7 @@ import Foundation
 extension String {
 
     func format(with style: NumberFormatter.Style) -> String {
-        guard let double = Double(self) else {
-            return ""
-        }
+        guard let timeInterval = TimeInterval(self) else { return "" }
 
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = style
@@ -22,7 +20,7 @@ extension String {
         numberFormatter.currencySymbol = "$"
         numberFormatter.maximumFractionDigits = 3
 
-        return numberFormatter.string(from: NSNumber(value: double)) ?? ""
+        return numberFormatter.string(from: NSNumber(value: timeInterval)) ?? ""
     }
 
     var formattedAsStringDate: String {

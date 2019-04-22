@@ -47,7 +47,6 @@ final class StatusMenuController: NSObject {
     }
 
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    private var updateInterval = TimerInterval.basic
 	
     private var timer: Timer?
 	private var timerState: TimerState = .updating
@@ -63,7 +62,7 @@ final class StatusMenuController: NSObject {
             UserDefaults.currentCurrency = currentCoinID
         }
     }
-    private var isConnectionLost: Bool = false
+    private var isConnectionLost = false
 
 	// MARK: View Lifecycle
 	
@@ -83,13 +82,13 @@ final class StatusMenuController: NSObject {
         statisticMenuItem.view = statisticMenuView
 
         // Scheduling updates
-        scheduleUpdates()
+        scheduleUpdates(timeInterval: TimerInterval.basic)
 	}
 
 	// MARK: Update Methods
     
-    private func scheduleUpdates() {
-        timer = Timer.scheduledTimer(timeInterval: updateInterval, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    private func scheduleUpdates(timeInterval: TimeInterval) {
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
     @objc private func update() {
@@ -97,7 +96,8 @@ final class StatusMenuController: NSObject {
             switchAppState(to: .error)
             return
         }
-        CryptoAPI.fetchRates(currency: currentCoinID) { result in
+        CryptoAPI.fetchRates(currency: currentCoinID) { [weak self] result in
+            guard let self = self else { return }
 			switch result {
             case .success(let coin):
                 guard let coin = coin else {
@@ -140,14 +140,13 @@ final class StatusMenuController: NSObject {
             statusItem.image = NSImage(named: coin.id) ?? NSImage(named: "default")
             statisticMenuView.render(coin)
             if isConnectionLost {
-                statusItem.image = NSImage(named: coin.id) ?? NSImage(named: "default")
                 constructCurrencyMenu()
                 setTimerUpdateWith(timerInterval: TimerInterval.basic)
                 isConnectionLost = false
             }
         case .updating(let coin):
             let coin = coin ?? "default"
-            statusItem.image = NSImage(named: coin) ?? NSImage(named: "default")
+            statusItem.image = NSImage(named: coin)
             statusItem.title = NSLocalizedString("Updating…", comment: "Title next to the rate, that indicates an update process.")
         case .error:
             if isConnectionLost == false {
@@ -167,8 +166,7 @@ final class StatusMenuController: NSObject {
     
     private func setTimerUpdateWith(timerInterval: TimeInterval) {
         invalidateTimer()
-        updateInterval = timerInterval
-        scheduleUpdates()
+        scheduleUpdates(timeInterval: timerInterval)
     }
 
     // MARK: Currencies Menu Construction
@@ -209,7 +207,7 @@ final class StatusMenuController: NSObject {
 
     /// Finds the first previously selected element and turns it off. Selects the current element.
     private func setMenuItemStateOn(for item: NSMenuItem) {
-        currenciesMenuAsset.submenu?.items.first(where: { $0.state == .on })?.state = .off
+        currenciesMenuAsset.submenu?.items.first { $0.state == .on }?.state = .off
         item.state = .on
     }
 
